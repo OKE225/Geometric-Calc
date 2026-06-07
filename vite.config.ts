@@ -5,10 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/Geometric-Calc/",
-  build: {
-    rollupOptions: {
-      input: "src/main.tsx",
-    },
-  },
+  // base: "/Geometric-Calc/", // add on deploy
 });

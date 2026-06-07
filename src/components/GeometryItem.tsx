@@ -17,7 +17,7 @@ const GeometryItem = ({ icon }: Props) => {
       className={`${colorClasses} p-4 rounded-3xl cursor-pointer`}
       onClick={() => setCurrentGeometry(icon)}>
       <svg className="w-12 h-12" viewBox="0 0 256 256">
-        <use href={`/${icon}.svg`} />
+        <use href={`./${icon}.svg`} />
       </svg>
     </div>
   );
