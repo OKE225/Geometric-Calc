@@ -12,7 +12,7 @@ function AppContent() {
     <div className="pt-2 h-full overflow-hidden w-[98%] mx-auto">
       <Navigation />
 
-      <main className="flex gap-2 mt-20 h-[80%] overflow-hidden">
+      <main className="flex flex-row max-md:flex-col gap-2 mt-20 h-[80%] overflow-hidden">
         {currentGeometry === "cube" && <CubeContainer />}
         {currentGeometry === "cuboid" && <CuboidContainer />}
         {currentGeometry === "sphere" && <SphereContainer />}
