@@ -6,9 +6,13 @@ import CubeForm from "./CubeForm";
 import CubeResults from "./CubeResults";
 
 const CubeContainer = () => {
-  const [sideLength, setSideLength] = useState(0);
+  const [sideLength, setSideLength] = useState<undefined | number>(undefined);
 
   const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === "") {
+      setSideLength(undefined);
+    }
+
     const value = parseFloat(e.target.value);
     if (!isNaN(value)) {
       setSideLength(value);
@@ -22,12 +26,14 @@ const CubeContainer = () => {
           sideLength={sideLength}
           handleChangeValue={handleChangeValue}
         />
-        {sideLength > 0 && <CubeResults a={sideLength} />}
+        {sideLength !== undefined && sideLength > 0 && (
+          <CubeResults a={sideLength} />
+        )}
       </CalculateForm>
 
-      {sideLength > 0 && (
+      {sideLength !== undefined && sideLength > 0 && (
         <Geometry3D>
-          <Cube3D />
+          <Cube3D sideLength={sideLength} />
         </Geometry3D>
       )}
     </>
