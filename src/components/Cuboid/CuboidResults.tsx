@@ -1,3 +1,5 @@
+import ResultText from "../ResultText";
+
 interface Props {
   a: number;
   b: number;
@@ -12,12 +14,23 @@ const CuboidResults = ({ a, b, c }: Props) => {
   const L = 4 * (a + b + c);
 
   return (
-    <div>
-      <p>Volume = {V}</p>
-      <p>Total surface area = {Pc}</p>
-      <p>Base area = {Pp}</p>
-      <p>Lateral surface area = {Pb}</p>
-      <p>Sum of edge lengths = {L}</p>
+    <div className="mt-5">
+      <p>
+        Volume <ResultText bgColor="bg-orange-500">{V}</ResultText>
+      </p>
+      <p>
+        Total surface area <ResultText bgColor="bg-orange-500">{Pc}</ResultText>
+      </p>
+      <p>
+        Base area <ResultText bgColor="bg-orange-500">{Pp}</ResultText>
+      </p>
+      <p>
+        Lateral surface area{" "}
+        <ResultText bgColor="bg-orange-500">{Pb}</ResultText>
+      </p>
+      <p>
+        Sum of edge lengths <ResultText bgColor="bg-orange-500">{L}</ResultText>
+      </p>
     </div>
   );
 };

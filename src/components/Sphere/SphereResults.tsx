@@ -1,3 +1,5 @@
+import ResultText from "../ResultText";
+
 interface Props {
   r: number;
 }
@@ -9,11 +11,19 @@ const SphereResults = ({ r }: Props) => {
   const C = Math.round(2 * r) + "π";
 
   return (
-    <div>
-      <p>Diameter, d = {d}</p>
-      <p>Volume = {V}</p>
-      <p>Surface area = {Pc}</p>
-      <p>Circumference (of the great circle) = {C}</p>
+    <div className="mt-5">
+      <p>
+        Diameter, d <ResultText bgColor="bg-yellow-500">{d}</ResultText>
+      </p>
+      <p>
+        Volume <ResultText bgColor="bg-yellow-500">{V}</ResultText>
+      </p>
+      <p>
+        Surface area <ResultText bgColor="bg-yellow-500">{Pc}</ResultText>
+      </p>
+      <p>
+        Circumference <ResultText bgColor="bg-yellow-500">{C}</ResultText>
+      </p>
     </div>
   );
 };
