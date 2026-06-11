@@ -1,7 +1,7 @@
 interface Props {
-  sideA: number;
-  sideB: number;
-  sideC: number;
+  sideA: undefined | number;
+  sideB: undefined | number;
+  sideC: undefined | number;
   handleChangeValueA: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleChangeValueB: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleChangeValueC: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -22,7 +22,6 @@ const CuboidForm = ({
         type="number"
         className="border"
         id="a"
-        placeholder="np. 1"
         min={0}
         value={sideA}
         onChange={handleChangeValueA}
@@ -32,7 +31,6 @@ const CuboidForm = ({
         type="number"
         className="border"
         id="b"
-        placeholder="np. 2"
         min={0}
         value={sideB}
         onChange={handleChangeValueB}
@@ -42,7 +40,6 @@ const CuboidForm = ({
         type="number"
         className="border"
         id="c"
-        placeholder="np. 3"
         min={0}
         value={sideC}
         onChange={handleChangeValueC}

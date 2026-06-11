@@ -1,5 +1,5 @@
 interface Props {
-  sideLength: number;
+  sideLength: undefined | number;
   handleChangeValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -11,7 +11,6 @@ const CubeForm = ({ sideLength, handleChangeValue }: Props) => {
         type="number"
         className="border"
         id="a"
-        placeholder="1"
         min={0}
         value={sideLength}
         onChange={handleChangeValue}

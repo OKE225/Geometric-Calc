@@ -1,16 +1,16 @@
 interface Props {
-  radius: number;
+  radius: undefined | number;
   handleChangeRadius: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const SphereForm = ({ radius, handleChangeRadius }: Props) => {
   return (
     <div className="flex flex-col">
-      <label htmlFor="a">Enter radius</label>
+      <label htmlFor="r">Enter r</label>
       <input
         type="number"
         className="border"
-        id="a"
+        id="r"
         min={0}
         value={radius}
         onChange={handleChangeRadius}
