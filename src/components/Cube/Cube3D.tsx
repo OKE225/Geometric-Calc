@@ -1,5 +1,5 @@
 interface Props {
-  sideLength?: number;
+  sideLength: number;
 }
 
 const Cube3D = ({ sideLength = 1 }: Props) => {
