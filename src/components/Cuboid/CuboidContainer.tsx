@@ -4,44 +4,12 @@ import Geometry3D from "../Geometry3D";
 import Cuboid3D from "./Cuboid3D";
 import CuboidForm from "./CuboidForm";
 import CuboidResults from "./CuboidResults";
+import { handleChangeValue } from "../../lib/handleChangeValue";
 
 const CuboidContainer = () => {
   const [sideA, setSideA] = useState<undefined | number>(undefined);
   const [sideB, setSideB] = useState<undefined | number>(undefined);
   const [sideC, setSideC] = useState<undefined | number>(undefined);
-
-  const handleChangeValueA = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === "") {
-      setSideA(undefined);
-    }
-
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      setSideA(value);
-    }
-  };
-
-  const handleChangeValueB = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === "") {
-      setSideB(undefined);
-    }
-
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      setSideB(value);
-    }
-  };
-
-  const handleChangeValueC = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === "") {
-      setSideC(undefined);
-    }
-
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      setSideC(value);
-    }
-  };
 
   return (
     <>
@@ -50,9 +18,9 @@ const CuboidContainer = () => {
           sideA={sideA}
           sideB={sideB}
           sideC={sideC}
-          handleChangeValueA={handleChangeValueA}
-          handleChangeValueB={handleChangeValueB}
-          handleChangeValueC={handleChangeValueC}
+          handleChangeValueA={(e) => handleChangeValue(e, setSideA)}
+          handleChangeValueB={(e) => handleChangeValue(e, setSideB)}
+          handleChangeValueC={(e) => handleChangeValue(e, setSideC)}
         />
         {sideA !== undefined &&
           sideB !== undefined &&

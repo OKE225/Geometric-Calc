@@ -4,25 +4,18 @@ import Geometry3D from "../Geometry3D";
 import Sphere3D from "./Sphere3D";
 import SphereForm from "./SphereForm";
 import SphereResults from "./SphereResults";
+import { handleChangeValue } from "../../lib/handleChangeValue";
 
 const SphereContainer = () => {
   const [radius, setRadius] = useState<undefined | number>(undefined);
 
-  const handleChangeRadius = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === "") {
-      setRadius(undefined);
-    }
-
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      setRadius(value);
-    }
-  };
-
   return (
     <>
       <CalculateForm>
-        <SphereForm radius={radius} handleChangeRadius={handleChangeRadius} />
+        <SphereForm
+          radius={radius}
+          handleChangeRadius={(e) => handleChangeValue(e, setRadius)}
+        />
         {radius !== undefined && radius > 0 && <SphereResults r={radius} />}
       </CalculateForm>
 

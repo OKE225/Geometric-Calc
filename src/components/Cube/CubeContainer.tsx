@@ -4,27 +4,17 @@ import Geometry3D from "../Geometry3D";
 import Cube3D from "./Cube3D";
 import CubeForm from "./CubeForm";
 import CubeResults from "./CubeResults";
+import { handleChangeValue } from "../../lib/handleChangeValue";
 
 const CubeContainer = () => {
   const [sideLength, setSideLength] = useState<undefined | number>(undefined);
-
-  const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value === "") {
-      setSideLength(undefined);
-    }
-
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      setSideLength(value);
-    }
-  };
 
   return (
     <>
       <CalculateForm>
         <CubeForm
           sideLength={sideLength}
-          handleChangeValue={handleChangeValue}
+          handleChangeValue={(e) => handleChangeValue(e, setSideLength)}
         />
         {sideLength !== undefined && sideLength > 0 && (
           <CubeResults a={sideLength} />
