@@ -1,4 +1,5 @@
 # docker build -t geometrics .
+# docker run -p 5173:5173 geometrics
 
 FROM node:25-alpine
 
