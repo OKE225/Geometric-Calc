@@ -16,15 +16,15 @@ const Geometry3D = ({ maxLength = 1, children, offSecondLight }: Props) => {
         fov: 20,
         far: 10_000,
       }}>
-      <ambientLight intensity={1.25} />
+      <ambientLight intensity={2.25} />
       <directionalLight
-        intensity={1}
+        intensity={1.25}
         position={[2 * maxLength, 3 * maxLength, 1 * maxLength]}
       />
 
       {!offSecondLight && (
         <directionalLight
-          intensity={1}
+          intensity={1.25}
           position={[-2 * maxLength, -3 * maxLength, -1 * maxLength]}
         />
       )}

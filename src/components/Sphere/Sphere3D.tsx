@@ -6,7 +6,7 @@ const Sphere3D = ({ radius }: Props) => {
   return (
     <>
       <sphereGeometry args={[radius]} />
-      <meshStandardMaterial color={0xeab308} />
+      <meshStandardMaterial color={0xca8a04} />
     </>
   );
 };
