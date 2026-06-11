@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+input {
+  @apply rounded-lg pl-2 py-0.5 border-zinc-300;
+}
+
+label {
+  @apply text-lg;
+}

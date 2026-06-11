@@ -10,12 +10,12 @@ const CalculateForm = ({ children }: Props) => {
   const { currentGeometry } = useGeometry();
 
   return (
-    <form className="bg-zinc-50 min-w-100 p-2 shadow-lg rounded-3xl h-fit">
+    <form className="bg-zinc-50 min-w-75 p-2 shadow-lg rounded-3xl h-fit">
       <div className="w-fit">
         <GeometryItem icon={currentGeometry} />
       </div>
 
-      {children}
+      <div className="m-2">{children}</div>
     </form>
   );
 };
