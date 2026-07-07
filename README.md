@@ -1,73 +1,24 @@
-# React + TypeScript + Vite
+# Geometric Calc
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web app for calculating values of 3D geometric shapes. Users enter dimensions such as length, width, height, or radius, and the app instantly shows calculated results. The app also provides a real-time 3D preview that updates as you change values, so you can see the shape and understand how dimensions affect its form. The interface is clean and responsive, making it easy to use on both desktop and mobile devices.
 
-Currently, two official plugins are available:
+![app preview](./public/geometry-preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[**➥ Live**](https://oke225.github.io/Geometric-Calc/)
 
-## React Compiler
+## ⚙️ Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[![My Skills](https://skillicons.dev/icons?i=react,tailwindcss,threejs,ts,docker,js,vite)](https://skillicons.dev)
 
-## Expanding the ESLint configuration
+## ⭐ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Real-time 3D visualization of the selected shape
+- Input fields for dimensions with instant updates
+- Calculate various values for a chosen figure
+- Interactive preview to better understand the geometry
+- Clean UI
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔎 See Also
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [My Website](https://pj-portfolio-cv.vercel.app)
+- [My GitHub profile](https://github.com/OKE225)
